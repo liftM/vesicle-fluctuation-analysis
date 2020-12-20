@@ -1,0 +1,16 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+pims = "0.5"
+matplotlib = "3.3.3"
+opencv-contrib-python-headless = "4.4.0.46"
+scikit-image = "0.18.0"
+numpy = "1.19.4"
+
+[dev-packages]
+
+[requires]
+python_version = "3.8.6"
