@@ -9,6 +9,7 @@ matplotlib = "3.3.3"
 opencv-contrib-python-headless = "4.4.0.46"
 scikit-image = "0.18.0"
 numpy = "1.19.4"
+imagecodecs = "2020.5.30"
 
 [dev-packages]
 
