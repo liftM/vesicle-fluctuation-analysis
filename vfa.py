@@ -1,3 +1,4 @@
+import argparse
 import numpy as np
 import pims
 import cv2 as cv
@@ -7,13 +8,16 @@ import matplotlib.backends.backend_pdf as bpdf
 import skimage
 from skimage import filters, exposure, feature, transform, color, draw
 
-# Configure matplotlib backend.
+# Set matplotlib configuration.
 mpl.use("pdf")
-
-# Set default styles.
 mpl.rcParams["image.cmap"] = "gray"
 
-# TODO: Parse arguments.
+# Parse user arguments.
+parser = argparse.ArgumentParser()
+parser.add_argument('--dark_image', help='filepath to image captured in the dark')
+parser.add_argument('--flat_image', help = 'filepath to uniform image captured under lighting')
+parser.add_argument('--target_images', help='filepath to target images')
+args = parser.parse_args()
 
 # Given a TIFF stack layer, get the ideal circle and the fluctuation amplitudes.
 # TODO: use parsed argument, not hardcoded file paths.
